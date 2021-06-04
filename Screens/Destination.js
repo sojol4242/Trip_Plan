@@ -11,6 +11,7 @@ const StarReview = ({ rate }) => {
   var noStar = Math.floor(5 - rate);
   var halfStar = 5 - fullStar - noStar;
 
+
   // Full Star
   for (var i = 0; i < fullStar; i++) {
     starComponents.push(
@@ -89,6 +90,7 @@ const IconLabel = ({ icon, label }) => {
 };
 
 const Destination = ({ navigation }) => {
+  var price= Math.round(Math.random() * 1000);
   return (
     <View style={styles.container}>
       {/* Header */}
@@ -111,11 +113,12 @@ const Destination = ({ navigation }) => {
               borderRadius: 15,
               padding: SIZES.padding,
               backgroundColor: COLORS.white,
+              // marginTop:50 
             },
             styles.shadow,
           ]}
         >
-          <View style={{ flexDirection: "row" }}>
+          <View style={{ flexDirection: "row"}}>
             <View style={styles.shadow}>
               <Image
                 source={images.skiVilla}
@@ -134,8 +137,10 @@ const Destination = ({ navigation }) => {
                 justifyContent: "space-around",
               }}
             >
-              <Text style={{ ...FONTS.h3 }}>Ski Villa</Text>
-              <Text style={{ color: COLORS.gray, ...FONTS.body3 }}>France</Text>
+              <Text style={{ ...FONTS.h3 }}> Place Name </Text>
+              <Text style={{ color: COLORS.gray, ...FONTS.body3 }}>
+                Location
+              </Text>
 
               <StarReview rate={4.5} />
             </View>
@@ -143,8 +148,9 @@ const Destination = ({ navigation }) => {
 
           <View style={{ marginTop: SIZES.radius }}>
             <Text style={{ color: COLORS.gray, ...FONTS.body3 }}>
-              Ski Villa offers simple rooms with mountain views in front of the
-              ski lift to the Ski Resort
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt
+              atque itaque officiis aliquam suscipit accusamus expedita esse
+              ratione sint consequatur.
             </Text>
           </View>
         </View>
@@ -225,10 +231,12 @@ const Destination = ({ navigation }) => {
               ...FONTS.body3,
             }}
           >
-            Located at the Alps with an altitude of 1,702 meters. The ski area
-            is the largest ski area in the world and is known as the best place
-            to ski. Many other facilities, such as fitness center, sauna, steam
-            room to star-rated restaurants.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, sunt a
+            dolorem minima obcaecati odit quisquam dicta id corrupti harum.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex tenetur
+            magnam, veniam enim in amet, quidem nihil incidunt corporis
+            perferendis consequatur perspiciatis? Perspiciatis tenetur incidunt
+            veritatis laborum dolor vero asperiores?
           </Text>
         </View>
       </View>
@@ -241,15 +249,16 @@ const Destination = ({ navigation }) => {
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 0 }}
         >
-          <View style={{ flex: 1, flexDirection: "row", alignItems: "center" }}>
+          <View style={{ flex: 1, flexDirection: "row", alignItems: "center"}}>
             <View
               style={{
                 flex: 1,
                 marginHorizontal: SIZES.padding,
                 justifyContent: "center",
+          
               }}
             >
-              <Text style={{ ...FONTS.h1 }}>$1000</Text>
+              <Text style={{ ...FONTS.h1 }}>${price}</Text>
             </View>
 
             <TouchableOpacity
@@ -257,6 +266,7 @@ const Destination = ({ navigation }) => {
                 width: 130,
                 height: "80%",
                 marginHorizontal: SIZES.radius,
+
               }}
               onPress={() => {
                 console.log("Booking on pressed");
@@ -269,6 +279,7 @@ const Destination = ({ navigation }) => {
                     alignItems: "center",
                     justifyContent: "center",
                     borderRadius: 10,
+                    
                   },
                 ]}
                 colors={["#46aeff", "#5884ff"]}
@@ -291,6 +302,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: COLORS.white,
+   
   },
   shadow: {
     shadowColor: "#000",

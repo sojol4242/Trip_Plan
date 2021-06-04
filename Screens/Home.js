@@ -58,12 +58,12 @@ const Home = ({ navigation }) => {
   const [destinations, setDestinations] = React.useState([
     {
       id: 0,
-      name: "Ski Villa",
+      name: "Kathmundu",
       img: images.skiVilla,
     },
     {
       id: 1,
-      name: "Climbing Hills",
+      name: "Hills",
       img: images.climbingHills,
     },
     {
@@ -73,7 +73,7 @@ const Home = ({ navigation }) => {
     },
     {
       id: 3,
-      name: "Beach",
+      name: "Cox's Bazar",
       img: images.beach,
     },
   ]);
@@ -120,6 +120,8 @@ const Home = ({ navigation }) => {
         style={{
           flex: 1,
           marginTop: SIZES.base,
+          marginBottom: SIZES.base,
+
           paddingHorizontal: SIZES.padding,
         }}
       >
@@ -135,7 +137,14 @@ const Home = ({ navigation }) => {
       </View>
 
       {/* Options */}
-      <View style={{ flex: 1, justifyContent: "center" }}>
+      <View
+        style={{
+          flex: 1,
+          justifyContent: "center",
+          marginTop: SIZES.base,
+          marginBottom: 40,
+        }}
+      >
         <View
           style={{
             flexDirection: "row",
