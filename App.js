@@ -46,11 +46,12 @@ const App = () => {
                 onPress={() => console.log("Pressed")}
               >
                 <Image
-                  source={icons.barMenu}
+                  source="https://static.thenounproject.com/png/2292434-200.png"
                   resizeMode="contain"
                   style={{
                     width: 25,
                     height: 25,
+                  
                   }}
                 />
               </TouchableOpacity>;

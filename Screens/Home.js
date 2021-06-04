@@ -63,18 +63,53 @@ const Home = ({ navigation }) => {
     },
     {
       id: 1,
-      name: "Hills",
-      img: images.climbingHills,
+      name: "Sylhet",
+      img: "http://www.visitsylhet.com/images/thumbs/places/view/t3.jpg",
     },
     {
       id: 2,
-      name: "Frozen Hills",
-      img: images.frozenHills,
+      name: "Dhaka",
+      img: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/67/91/99/caption.jpg?w=300&h=300&s=1",
     },
     {
       id: 3,
       name: "Cox's Bazar",
-      img: images.beach,
+      img: "https://tourrom.com/wp-content/uploads/2019/01/coxbazaar-1024x573.gif",
+    },
+    {
+      id: 4,
+      name: "Nepal",
+      img: "https://www.planetware.com/photos-large/NEP/nepal-everest-base-camp-trek.jpg",
+    },
+    {
+      id: 5,
+      name: "Kashmir",
+      img: "https://media.easemytrip.com/media/Blog/India/637188548584468080/637188548584468080hquDq3.jpg",
+    },
+    {
+      id: 6,
+      name: "Delhi",
+      img: "https://www.planetware.com/photos-large/IND/india-delhi-red-fort.jpg",
+    },
+    {
+      id: 7,
+      name: "Sundarban",
+      img: "https://www.sundarbantours.com/wp-content/uploads/2013/03/Hiron-Point-Sundarban.jpg",
+    },
+    {
+      id: 8,
+      name: "Rangamati",
+      img: "https://blog.amarroom.com/wp-content/uploads/2019/04/rangamati-tour.jpg",
+    },
+    {
+      id: 9,
+      name: "switzerland",
+      img: "http://www.planetware.com/photos-large/CH/switzerland-matterhorn.jpg",
+    },
+    {
+      id: 10,
+      name: "Shrimangal",
+      img: "https://avijatrik.org/wp-content/uploads/2020/09/tea-870x555.jpg",
     },
   ]);
 
