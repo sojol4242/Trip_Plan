@@ -1,4 +1,4 @@
-import React from 'react';
+ 
 import Home from './Home';
 import Destination from './Destination';
 import Onboarding from './Onboarding';

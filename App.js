@@ -2,9 +2,11 @@ import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { Text, View, Image, TouchableOpacity } from "react-native";
 import { createStackNavigator } from "@react-navigation/stack";
-import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
+import { NavigationContainer } from '@react-navigation/native';
+import { DefaultTheme } from "@react-navigation/native";
 import { Onboarding, Destination } from "./Screens/index";
 import { icons, COLORS, SIZES } from './constants';
+import Tabs from './navigations/Tabs'
 
 const theme = {
   ...DefaultTheme,
@@ -55,6 +57,54 @@ const App = () => {
             },
           }}
         />
+        
+        <Stack.Screen
+                    name="Destination"
+                    component={Destination}
+                    options={{ headerShown: false }}
+                />
+
+                {/* Tabs */}
+                < Stack.Screen
+                    name="Home"
+                    component={Tabs}
+                    options={{
+                        title: null,
+                        headerStyle: {
+                            backgroundColor: COLORS.white
+                        },
+                        headerLeft: ({ onPress }) => (
+                            <TouchableOpacity
+                                style={{ marginLeft: SIZES.padding }}
+                                onPress={onPress}
+                            >
+                                <Image
+                                    source={icons.back}
+                                    resizeMode="contain"
+                                    style={{
+                                        width: 25,
+                                        height: 25,
+                                    }}
+                                />
+                            </TouchableOpacity>
+                        ),
+                        headerRight: () => (
+                            <TouchableOpacity
+                                style={{ marginRight: SIZES.padding }}
+                                onPress={() => console.log("Menu")}
+                            >
+                                <Image
+                                    source={icons.menu}
+                                    resizeMode="contain"
+                                    style={{
+                                        width: 25,
+                                        height: 25,
+                                    }}
+                                />
+                            </TouchableOpacity>
+                        ),
+                    }}
+                />
       </Stack.Navigator>
     </NavigationContainer>
   );
